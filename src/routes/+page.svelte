@@ -210,9 +210,10 @@
   </section>
  
     <!-- CV Download Button -->
+    <!-- href="src/lib/documents/CV_SHUVO_2.pdf" -->
     <div class="mt-4">
         <a
-            href="src/lib/documents/CV_SHUVO_2.pdf"
+            href="https://drive.google.com/file/d/1bEKnYj8eLsTO9sKft4j-RXU2ukm594ub/view?usp=sharing"
             target="_blank"
             class="inline-flex items-center gap-2 px-6 py-2 bg-primary_dark dark:bg-primary_light text-white dark:text-black rounded-lg hover:opacity-90 transition-opacity"
         >
