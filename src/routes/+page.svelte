@@ -211,6 +211,7 @@
  
     <!-- CV Download Button -->
     <!-- href="src/lib/documents/CV_SHUVO_2.pdf" -->
+    <!--
     <div class="mt-4">
         <a
             href="https://drive.google.com/file/d/1bEKnYj8eLsTO9sKft4j-RXU2ukm594ub/view?usp=sharing"
@@ -223,6 +224,7 @@
             Download CV
         </a>
     </div>
+    -->
 
   <!-- Compact About Section -->
   <section
