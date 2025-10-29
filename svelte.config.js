@@ -1,18 +1,21 @@
+// Example changes — ensure adapter-static is used and set paths.base
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-
-/** @type {import('@sveltejs/kit').Config} */
 
 const config = {
-  preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({
-      fallback: "404.html",
+      // optional: pages, assets directories you want adapter to output
+      // pages: 'build',
+      // assets: 'build'
     }),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/portfolio" : "",
+      base: '/portfolio' // important for GitHub Pages project site
     },
-  },
+    // If you rely on prerendering, ensure routes are prerendered as needed
+    prerender: {
+      default: true
+    }
+  }
 };
 
 export default config;
