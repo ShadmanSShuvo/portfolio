@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/portfolio/', // ensures built asset urls are prefixed correctly
-  plugins: [sveltekit()]
+  plugins: [sveltekit()],
+  server: {
+    fs: {
+      // allow serving files from project root (adjust if you want to restrict)
+      allow: ['.']
+    }
+  }
 });
