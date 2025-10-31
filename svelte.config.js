@@ -1,20 +1,18 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
+  // Use vitePreprocess for SvelteKit v2
+  preprocess: vitePreprocess(),
+
   kit: {
-    adapter: adapter({
-      // put the built static site here so GH Actions can upload it
-      pages: 'build',
-      assets: 'build',
-      // fallback helps client-side routing on hosts that don't support SPA fallback.
-      // Use 'index.html' for SPA fallback or null if you want strict pre-rendering.
-      fallback: 'index.html'
-    }),
-    paths: {
-      base: '/portfolio' // required for GitHub Pages project site
-    },
-    prerender: {
-      default: true
+    // adapter-auto is fine for development; change to adapter-static or adapter-node as needed
+    adapter: adapter(),
+
+    // default assets/static folder
+    files: {
+      assets: 'static'
     }
   }
 };
